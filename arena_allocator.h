@@ -1,5 +1,5 @@
-#ifndef GCA_ARENA_ALLOCATOR_H
-#define GCA_ARENA_ALLOCATOR_H
+#ifndef AC_ARENA_ALLOCATOR_H
+#define AC_ARENA_ALLOCATOR_H
 
 #include <cassert>
 #include <cstdlib>

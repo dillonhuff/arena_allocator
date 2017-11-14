@@ -9,7 +9,7 @@ using namespace std;
 
 #define DEFAULT_ARENA_SIZE 5000000
 
-namespace CoreIR {
+namespace arena_alloc {
   
   class arena_allocator {
   protected:
@@ -52,14 +52,6 @@ namespace CoreIR {
 
   };
 
-  void set_system_allocator(arena_allocator* a);
-  void* alloc(size_t s);
-  
-  template<typename T> T* allocate() {
-    void* to_alloc = alloc(sizeof(T));
-    return static_cast<T*>(to_alloc);
-  }
-    
 }
 
 #endif

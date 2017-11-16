@@ -26,6 +26,12 @@ namespace arena_alloc {
       current = start;
     }
 
+    arena_allocator(const size_t size_) : size(size_) {
+      space_left = size;
+      start = static_cast<char*>(malloc(size));
+      current = start;
+    }
+    
     size_t get_size_left() const { return space_left; }
 
     ~arena_allocator() {

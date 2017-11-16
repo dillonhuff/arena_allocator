@@ -35,7 +35,7 @@ namespace arena_alloc {
     size_t get_size_left() const { return space_left; }
 
     ~arena_allocator() {
-      delete start;
+      free(start);
     }
 
     void* alloc(size_t s) {
